@@ -22,7 +22,7 @@ from main.views import togo, second
 urlpatterns = [
     path('admin/', admin.site.urls),
     
-    path("togo", togo, name="togo"),
+    path("togo/", togo, name="togo"),
     path ("test2/", second )
     
 
