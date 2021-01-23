@@ -16,12 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from main.views import togo, second
+from main.views import testing
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('test5/', testing),
     
     path("togo/", togo, name="togo"),
     path ("test2/", second )
