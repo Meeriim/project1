@@ -36,14 +36,14 @@
                 <h4>{{ todo.text}}</h4>
             </div>
             <div class="todo_item_footer">
-                 <p>{{todo.created_at}} <span>21:32</span></p>
+                 <p>{{todo.created_at}} <span></span></p>
                  <div class="icon">
                    <img src= "{% static 'icon/star.png' %}" alt="" >
-                   <img src="{% static 'icon/del.png'%}" alt="">
-                 </div>
+                   <a href="{% url 'delete-todo' todo.id %}"><img src="{% static 'icon/del.png'%}" alt=""></a>           
+                </div>
             </div>
         </div>
-        {% endfor%}
+        {% endfor %}
     </div>
 </section>
 </body>

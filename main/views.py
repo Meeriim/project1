@@ -22,3 +22,9 @@ def add_todo (request):
     todo.save()
     return redirect(testing)
  
+
+def delete_todo(request, id ):
+    todo = ToDo.objects.get(id=id)
+    todo.delete()
+    return redirect(testing)
+ 
