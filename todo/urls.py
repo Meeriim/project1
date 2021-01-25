@@ -30,7 +30,7 @@ urlpatterns = [
     path ("delete-todo/<int:id>/", delete_todo, name="delete-todo"),
     path ("mark-todo/<int:id>/", mark_todo, name="mark-todo"),
     path ("unmark-todo/<int:id>/", unmark_todo, name="unmark-todo"),
-
+    path ("close-todo/<int:id>/", close_todo, name="close-todo"),
 
 
 ]  +static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)\
