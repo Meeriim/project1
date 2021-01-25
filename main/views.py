@@ -34,3 +34,10 @@ def mark_todo(request, id):
     todo.is_fovorite = True 
     todo.save()
     return redirect(testing)
+
+
+def unmark_todo(request, id):
+    todo = ToDo.objects.get(id=id)
+    todo.is_fovorite = False
+    todo.save()
+    return redirect(testing)

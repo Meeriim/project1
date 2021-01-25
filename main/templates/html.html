@@ -41,12 +41,12 @@
             <div class="todo_item_footer">
                  <p>{{todo.created_at}} <span></span></p>
                  <div class="icon">
-                     {% if todo.is_fovorite %}
-                        <a href=" {% url 'mark-todo' todo.id %}"><img src= "{% static 'icon/star2.png' %}" alt="" ></a>
-                     {% else %}
-                    <a href=" {% url 'mark-todo' todo.id %}"><img src= "{% static 'icon/star.png' %}" alt="" ></a>
-                     {% endif %}
-                    <a href="{% url 'delete-todo' todo.id %}"><img src="{% static 'icon/del.png'%}" alt=""></a>           
+              {% if todo.is_fovorite %}
+                        <a href=" {% url 'unmark-todo' todo.id %}"><img src= "{% static 'icon/star2.png' %}" alt="" ></a>
+              {%  else %}
+                         <a href=" {% url 'mark-todo' todo.id %}"><img src= "{% static 'icon/star.png' %}" alt="" ></a>
+              {% endif %}
+                        <a href="{% url 'delete-todo' todo.id %}"><img src="{% static 'icon/del.png'%}" alt=""></a>           
                 </div>
             </div>
         </div>
