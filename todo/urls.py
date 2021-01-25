@@ -28,6 +28,7 @@ urlpatterns = [
     path ("test2/", second ),
     path ("add-todo/", add_todo, name="add-todo"),
     path ("delete-todo/<int:id>/", delete_todo, name="delete-todo"),
+    path ("mark-todo/<int:id>/", mark_todo, name="mark-todo"),
 
 
 
